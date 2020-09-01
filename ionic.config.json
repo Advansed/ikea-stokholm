@@ -1,0 +1,7 @@
+{
+  "name": "ikea-stokholm",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react"
+}
