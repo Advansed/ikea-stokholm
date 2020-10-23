@@ -51,6 +51,7 @@ const LineChart: React.FC<ContainerProps> = ({ period, upd }) => {
           }
       }
 
+      console.log(params)
       let state = Store.getState().user
 
       axios.get(
@@ -64,7 +65,7 @@ const LineChart: React.FC<ContainerProps> = ({ period, upd }) => {
         } 
       ).then(response => response.data)
       .then((data) => {
-
+        console.log(data)
           if(data.Code !== 200){
 
           let n = 0
