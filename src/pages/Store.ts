@@ -436,7 +436,15 @@ function create_Store(reducer, initialState) {
 
 export function SERV(){
 
-    let url = " http://188.244.191.2:29080/trade/hs/API/V1/"
+    let ip =  localStorage.getItem("StokHolm_SERV");                
+    let port = localStorage.getItem("StokHolm_PORT");
+
+    console.log(ip + ":" + port)
+
+    if( ip  === undefined || ((ip as string).length < 13))       ip = "91.185.236.216"
+    if( port === undefined || ((port as string).length  < 5))   port = "29080"
+
+    let url = " http://" + ip + ":" + port + "/trade/hs/API/V1/"
 
     return url
 
